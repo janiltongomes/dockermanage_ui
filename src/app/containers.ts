@@ -3,7 +3,7 @@ export interface DataContainer {
 };
   
 export interface Container {
-    _id: string;
+    id: string;
     name: string;
     status: string;
     labels: any;

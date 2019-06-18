@@ -30,8 +30,6 @@ export class ContainersListComponent implements OnInit {
 
   containers: Container;
 
-  // const container: Container;
-  // const containers: DataContainer = {'data' : container};
   alerts: Alert[] = []
   selectedContainer;
   constructor(public dataService: DataService) { }
@@ -41,6 +39,7 @@ export class ContainersListComponent implements OnInit {
   }
 
   public listContainers(){
+      this.alerts = [];
       this.dataService.getContainers()
       .subscribe(
         (response) => {
@@ -52,9 +51,6 @@ export class ContainersListComponent implements OnInit {
       );
   }
 
-  // public selectContainer(container){
-  // this.selectedContainer = container;
-  // }
 
   public actionContainer(action, containerId, containerName){
   this.dataService.actionContainers(action, containerId)

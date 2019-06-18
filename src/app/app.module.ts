@@ -13,6 +13,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ContainersListComponent } from './containers-list/containers-list.component';
+import { ImagesListComponent } from './images-list/images-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContainersListComponent } from './containers-list/containers-list.compo
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ContainersListComponent
+    ContainersListComponent,
+    ImagesListComponent
   ],
   imports: [
     NgbModule,

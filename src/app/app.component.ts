@@ -11,6 +11,6 @@ export class AppComponent {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    this.router.navigate(['/containers/list'])
+    this.router.navigate(['/images/list'])
   }
 }

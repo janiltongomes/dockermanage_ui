@@ -6,11 +6,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Dependencies
 
-Angular CLI 7.0.7
-Node 12.4.0
-Angular 7.0.4
-DockerManage Api: https://github.com/janiltongomes/dockermanage_api.git
+Angular CLI
 
+Node
+
+Angular 7
+
+DockerManage Api: https://github.com/janiltongomes/dockermanage_api.git
 
 
 ## Development
