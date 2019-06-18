@@ -1,0 +1,38 @@
+<h3 class="p-5"></h3>
+<p *ngFor="let alert of alerts">
+    <ngb-alert [type]="alert.type" (close)="close(alert)">{{ alert.message }}</ngb-alert>
+  </p>
+  <p>
+    <button type="button" class="btn btn-primary" (click)="listContainers()">Reload</button>
+  </p>
+<table class="table table-striped mt-md-5">
+    <thead>
+    <tr>
+    <th scope="col">Container ID</th>
+    <th scope="col">Name</th>
+    <th scope="col">Stats</th>
+    <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let container of containers;">
+    <th scope="row" class="p-1"><small>{{ container.id | slice:0:15 }}</small></th>
+    <td class="p-1">
+            <small>{{container.name }}</small>
+    </td>
+    <td class="p-1"><small>{{container.status }}</small></td>
+    <td class="p-1">
+        <div class="btn-group mr-2">
+            <button type="button" class="btn btn-primary"><small>Action</small></button>
+            <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                <button class="btn btn-primary dropdown-toggle-split" ngbDropdownToggle></button>
+                <div class="dropdown-menu" ngbDropdownMenu>
+                <button ngbDropdownItem (click)="actionContainer('start', container.id, container.name)">Start</button>
+                <button ngbDropdownItem (click)="actionContainer('stop', container.id, container.name)">Stop</button>
+                </div>
+            </div>
+            </div>
+    </td>
+    </tr>
+    </tbody>
+</table>
